@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<head>
+	<link rel="stylesheet" href="style.css"/>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+	<script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js"></script>
+	<script src='https://unpkg.com/@turf/turf/turf.min.js'></script>
+	<script src='https://unpkg.com/jsts@1.6.1/dist/jsts.min.js'></script>
+   
+
+   <title>Mes voyages à vélo</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="left" id="mapid"></div>
+		<div class="right" id="choroid"></div>
+	</div>
+
+	<script src='routes.js'></script>
+	<script src='departments.js'></script>
+	<script src='leafletmap.js'></script>
+	<script src='choromap.js'></script>
+</body>
+</html>
