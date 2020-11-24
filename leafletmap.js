@@ -34,6 +34,8 @@ titre.onAdd = function (map) {
     return div;
 };
 
+
 routesLayer.addTo(mymap);
+L.control.scale().addTo(mymap);
 titre.addTo(mymap);
 osm_layer.addTo(mymap);
