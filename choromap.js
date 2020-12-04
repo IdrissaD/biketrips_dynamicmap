@@ -1,7 +1,6 @@
 var osm_layer = L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 
-	attribution: '<a href = "https://areskidrissa.cc" target = "_blank">areskidrissa.cc</a> Map data &copy; <a href="https://www.openstreetmap.org/" target = "_blank">OpenStreetMap</a> contributors, ' +
-
+	attribution: '<a href = "https://github.com/IdrissaD" target = "_blank">Idrissa Djepa</a> | Map data: Djepa and <a href="https://www.openstreetmap.org/" target = "_blank">OpenStreetMap</a> contributors, ' +
 	'<a href="https://creativecommons.org/licenses/by-sa/2.0/" target = "_blank">CC-BY-SA</a>'
 });
 
@@ -72,7 +71,7 @@ function getColor(d) {
            d > 50   ? 'rgba(213,239,207,1.0)' :
            d > 0   ? 'rgba(247,252,245,1.0)' :
            'rgba(255,255,255,0.0)';
-}
+};
 
 // Crate a legend control
 var legend = L.control({position: 'bottomright'});
@@ -83,14 +82,14 @@ legend.onAdd = function (map) {
         grades = [0, 50, 100, 150, 200, 250],
         labels = [];
 
-    div.innerHTML = '<p><b>Nombre de kilomètres<br>parcourus dans<br> le département</b></p>'
+    div.innerHTML = '<p><b>Nombre de kilomètres<br>parcourus dans<br> le département</b></p>';
 
     // loop through our density intervals and generate a label with a colored square for each interval
     for (var i = 0; i < grades.length; i++) {
         div.innerHTML +=
             '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
             grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] + '<br>' : '+');
-    }
+        };
 
     return div;
 };

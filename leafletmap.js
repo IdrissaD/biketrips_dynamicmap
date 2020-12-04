@@ -1,10 +1,4 @@
-var osm_layer = L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-
-	attribution: '<a href = "https://areskidrissa.cc" target = "_blank">areskidrissa.cc</a> Map data &copy; <a href="https://www.openstreetmap.org/" target = "_blank">OpenStreetMap</a> contributors, ' +
-
-	'<a href="https://creativecommons.org/licenses/by-sa/2.0/" target = "_blank">CC-BY-SA</a>'
-
-	});
+var osm_layer = L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png');
 
 
 var mymap = L.map('mapid').setView([49.49544809215964, 4.9706268310546875], 5);
@@ -23,7 +17,7 @@ var onEachFeature = function(feature,layer) {
 var routesLayer = L.geoJson(routes, {
         onEachFeature: onEachFeature,
         style: style
-    });
+});
 
 // Create the title section
 var titre = L.control({position: 'topright'});
